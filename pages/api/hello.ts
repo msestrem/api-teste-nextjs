@@ -10,5 +10,5 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   if(req.method != 'GET') return res.status(400).json({name: "Requisição HTTP inválida"})
-  res.status(200).json({ name: req.query.nome, date })
+  res.status(200).json({ name: req.query.nome})
 }
